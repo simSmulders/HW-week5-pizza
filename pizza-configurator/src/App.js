@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <img src={require('./logo/Da_Simone_2.PNG')} className="App-logo" alt="logo" />
+          <img src={require('./logo/NewAgePizza.PNG')} className="App-logo" alt="logo" />
         </header>
         <div className="App-body">
           <CssBaseline />

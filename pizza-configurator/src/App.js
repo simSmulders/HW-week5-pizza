@@ -4,6 +4,7 @@ import PizzaBase from './components/PizzaBase';
 import PizzaSauce from './components/PizzaSauce'
 import PizzaToppings from './components/PizzaToppings';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import Total from './components/Total'
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
           <PizzaBase />
           <PizzaSauce />
           <PizzaToppings />
+          <Total />
         </div>
       </div>
     );

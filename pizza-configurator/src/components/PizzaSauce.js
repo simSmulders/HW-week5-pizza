@@ -15,7 +15,7 @@ class PizzaSauce extends Component {
       return this.props.sauceFilter.map((sauce)=>{
           return (
             <span key={sauce.id}> {sauce.name}<br/>{`€ ${sauce.price}`}</span>
-          );
+            );
       });
   }
     
@@ -58,7 +58,7 @@ class PizzaSauce extends Component {
                         <label><input type="radio" name="sauce" value="Mix It Up" className="SauceForm-radio" onClick={ handleSauceMix }/>Mix it up</label>
                         <br/>
                         <br></br>
-                        <Button variant='extendedFab' color='white' type="button" onClick={ refreshPage }> <span>Refresh</span> </Button>
+                        <Button variant='extendedFab' color='default' type="button" onClick={ refreshPage }> <span>Refresh</span> </Button>
                     </div>
             </form>
             <div>

@@ -5,6 +5,8 @@ import sauceFilter from './sauceFilter'
 import sauceState from './sauceState'
 import toppingState from './toppingState'
 import toppingFilter from './toppingFilter'
+import dronePrice from './dronePrice'
+import totalPrice from './totalPrice'
 
 
 export default combineReducers({
@@ -14,4 +16,6 @@ export default combineReducers({
     sauceFilter,
     toppingState,
     toppingFilter,
+    dronePrice,
+    totalPrice
 })

@@ -91,7 +91,7 @@ class PizzaToppings extends Component {
                         <label><input type="checkbox" name="topping" value="Cherry tomatoes" className="ToppingForm-check" onClick={ handleToppingCher }/>Cherry tomatoes</label>
                         <br/>
                         <br></br>
-                        <Button variant='extendedFab' color='white' type="button" onClick={ refreshPage }> <span>Refresh</span> </Button>
+                        <Button variant='extendedFab' color='default' type="button" onClick={ refreshPage }> <span>Refresh</span> </Button>
                     </div>
             </form>
             <div>

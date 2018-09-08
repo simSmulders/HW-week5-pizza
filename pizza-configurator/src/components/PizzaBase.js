@@ -11,7 +11,7 @@ class PizzaBase extends Component {
             baseState
         }
     }
-    selectedBase(){
+   selectedBase () {
       return this.props.baseFilter.map((base)=>{
           return (
             <span key={base.id}> {base.name}<br/>{`€ ${base.price}`}</span>
@@ -61,7 +61,7 @@ class PizzaBase extends Component {
                         <label><input type="radio" name="base" value="35cm NY Style" className="filterForm-radio" onClick={ handleBase35 }/>35cm NY Style</label>
                         <br/>
                         <br></br>
-                        <Button variant='extendedFab' color='white' type="button" onClick={ refreshPage }> <span>Refresh</span> </Button>
+                        <Button variant='extendedFab' color='default' type="button" onClick={ refreshPage }> <span>Refresh</span> </Button>
                         
                     </div>
             </form>

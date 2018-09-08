@@ -10,6 +10,8 @@ export const UPDATE_TOPPINGOLIV = 'UPDATE_TOPPINGOLIV'
 export const UPDATE_TOPPINGONION = 'UPDATE_TOPPINGONION'
 export const UPDATE_TOPPINGSPIN = 'UPDATE_TOPPINGSPIN'
 export const UPDATE_TOPPINGCHER = 'UPDATE_TOPPINGCHER'
+export const DRONE_PRICE = 'DRONE_PRICE'
+export const TOTAL_PRICE = 'TOTAL_PRICE'
            
  
 export function updateBase25(bases) {
@@ -93,5 +95,15 @@ export function updateToppingCher(toppings) {
             type: UPDATE_TOPPINGCHER,
             payload: toppings
         })
+}
+export function dronePrice() {
+    return({
+        type: DRONE_PRICE,
+    })
+}
+export function totalPrice() {
+    return({
+        type: TOTAL_PRICE,
+    })
 }
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import sauceState from '../reducers/sauceState'
 import { updateSauceWhite, updateSauceRed, updateSauceMix } from '../actions/pizzalayers'
-
+import Button from '@material-ui/core/Button';
 
 class PizzaSauce extends Component { 
     constructor(props) {
@@ -20,10 +20,6 @@ class PizzaSauce extends Component {
   }
     
    render(){
-
-       const handleSubmit = (event) => {
-           event.preventDefault()
-       }
 
        const sauces = this.props.sauceState
        
@@ -61,7 +57,7 @@ class PizzaSauce extends Component {
                         <br/>
                         <label><input type="radio" name="sauce" value="Mix It Up" className="SauceForm-radio" onClick={ handleSauceMix }/>Mix it up</label>
                         <br/>
-                        <button type="button" onClick={ refreshPage }> <span>Refresh</span> </button>
+                        <Button type="button" onClick={ refreshPage }> <span>Refresh</span> </Button>
                     </div>
             </form>
             <div>

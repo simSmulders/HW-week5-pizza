@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import toppingState from '../reducers/toppingState'
 import { updateToppingPine, updateToppingCorn, updateToppingOliv, updateToppingOnion, updateToppingSpin, updateToppingCher } from '../actions/pizzalayers'
+import Button from '@material-ui/core/Button';
 
 
 
@@ -88,12 +89,12 @@ class PizzaToppings extends Component {
                         <br/>
                         <label><input type="checkbox" name="topping" value="Cherry tomatoes" className="ToppingForm-check" onClick={ handleToppingCher }/>Cherry tomatoes</label>
                         <br/>
-                        <button type="button" onClick={ refreshPage }> <span>Refresh</span> </button>
+                        <Button type="button" onClick={ refreshPage }> <span>Refresh</span> </Button>
                     </div>
             </form>
             <div>
                 <div>Selected Toppings: {this.selectedTopping()}</div>
-                <p onClick={ handleSubmit }>Submit</p>
+                <Button onClick={ handleSubmit }>Submit</Button>
                 <br />
             </div>
         </div>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import baseState from '../reducers/baseState'
 import { updateBase25, updateBase30, updateBase35 } from '../actions/pizzalayers'
-
+import Button from '@material-ui/core/Button';
 
 class PizzaBase extends Component { 
     constructor(props) {
@@ -20,10 +20,6 @@ class PizzaBase extends Component {
   }
     
    render(){
-
-       const handleSubmit = (event) => {
-           event.preventDefault()
-       }
 
        const bases = this.props.baseState
        
@@ -61,7 +57,7 @@ class PizzaBase extends Component {
                         <br/>
                         <label><input type="radio" name="base" value="35cm NY Style" className="filterForm-radio" onClick={ handleBase35 }/>35cm NY Style</label>
                         <br/>
-                        <button type="button" onClick={ refreshPage }> <span>Refresh</span> </button>
+                        <Button type="button" onClick={ refreshPage }> <span>Refresh</span> </Button>
                     </div>
             </form>
             <div>

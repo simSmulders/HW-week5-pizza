@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
-//import './Filter.css'
 import {connect} from 'react-redux';
-//import { Link } from 'react-router-dom'
 import baseState from '../reducers/baseState'
 import { updateBase25, updateBase30, updateBase35 } from '../actions/pizzalayers'
 
 
-class Filter extends Component { 
+class PizzaBase extends Component { 
     constructor(props) {
         super(props) 
         this.state= {
             baseState
         }
     }
-
+    selectedBase(){
+      return this.props.baseFilter.map((base)=>{
+          return (
+            <span key={base.id}> {base.name}<br/>{base.price}</span>
+          );
+      });
+  }
     
    render(){
 
        const handleSubmit = (event) => {
            event.preventDefault()
-           console.log(this.props.baseFilter)
        }
 
        const bases = this.props.baseState
@@ -42,7 +45,9 @@ class Filter extends Component {
 
        function refreshPage(){ 
         window.location.reload(); 
-    }
+        }
+        
+       
 
     return (
         <div>
@@ -60,8 +65,8 @@ class Filter extends Component {
                     </div>
             </form>
             <div>
-                <p>Selected Base: ({this.props.baseFilter.name})</p>
-                <p onClick={ handleSubmit }>Submit</p>
+                <div>Selected Base: {this.selectedBase()}</div>
+                {/* <p onClick={ handleSubmit }>Submit</p> */}
                 <br />
             </div>
         </div>
@@ -74,7 +79,7 @@ class Filter extends Component {
 const mapStateToProps = ({baseState, baseFilter}) => ({baseState, baseFilter}) 
 
 
-export default connect(mapStateToProps, { updateBase25, updateBase30, updateBase35 })(Filter)
+export default connect(mapStateToProps, { updateBase25, updateBase30, updateBase35 })(PizzaBase)
 
             
 

@@ -1,15 +1,4 @@
-const reducer = (state = toppings, action = {}) => {
-    switch (action.type) {
-    case 'ADD_TOPPINGS':
-      return [
-        ...state,
-        action.payload
-      ]
-    default:
-      return state
-    }
-}
-const toppings = [
+export const toppingState = [
     {
       id: 1,
       name: 'Pineapple',
@@ -43,4 +32,6 @@ const toppings = [
     
   ]
   
-export default reducer
+  export default (state = toppingState, action = {}) => {
+    return state
+}

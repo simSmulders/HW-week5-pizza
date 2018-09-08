@@ -1,13 +1,17 @@
 import { combineReducers } from 'redux'
 import baseState from './baseState'
 import baseFilter from './baseFilter'
-import sauce from './sauce'
-import toppings from './toppings'
+import sauceFilter from './sauceFilter'
+import sauceState from './sauceState'
+import toppingState from './toppingState'
+import toppingFilter from './toppingFilter'
 
 
 export default combineReducers({
     baseState,
     baseFilter,
-    sauce,
-    toppings
+    sauceState,
+    sauceFilter,
+    toppingState,
+    toppingFilter,
 })

@@ -18,7 +18,7 @@ class PizzaToppings extends Component {
     selectedTopping(){
             return this.props.toppingFilter.map((topping)=>{
                 return (
-                    <span key={topping.id}> {topping.name}<br/>{topping.price}</span>
+                    <span key={topping.id}> {topping.name}<br/>{`€ ${topping.price}`}</span>
                 );
             });
   }

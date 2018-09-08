@@ -14,7 +14,7 @@ class PizzaBase extends Component {
     selectedBase(){
       return this.props.baseFilter.map((base)=>{
           return (
-            <span key={base.id}> {base.name}<br/>{base.price}</span>
+            <span key={base.id}> {base.name}<br/>{`€ ${base.price}`}</span>
           );
       });
   }

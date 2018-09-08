@@ -14,7 +14,7 @@ class PizzaSauce extends Component {
     selectedSauce(){
       return this.props.sauceFilter.map((sauce)=>{
           return (
-            <span key={sauce.id}> {sauce.name}<br/>{sauce.price}</span>
+            <span key={sauce.id}> {sauce.name}<br/>{`€ ${sauce.price}`}</span>
           );
       });
   }

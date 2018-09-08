@@ -48,19 +48,21 @@ class PizzaSauce extends Component {
     return (
         <div>
             <form className="SauceForm">
-                    <label>Choose the sauce:</label>
+                    <label><b>Choose the sauce:</b></label>
                     <div className ="SauceRadio">
-
+                    <br></br>
                         <label><input type="radio" name="sauce"  value="White Sauce" className="SauceForm-radio" onClick={ handleSauceWhite } />White sauce</label>
                         <br/>
                         <label><input type="radio" name="sauce" value="Red Sauce" className="SauceForm-radio" onClick={ handleSauceRed }/>Red Sauce</label>
                         <br/>
                         <label><input type="radio" name="sauce" value="Mix It Up" className="SauceForm-radio" onClick={ handleSauceMix }/>Mix it up</label>
                         <br/>
-                        <Button type="button" onClick={ refreshPage }> <span>Refresh</span> </Button>
+                        <br></br>
+                        <Button variant='extendedFab' color='white' type="button" onClick={ refreshPage }> <span>Refresh</span> </Button>
                     </div>
             </form>
             <div>
+                <br></br>
                 <div>Selected Sauce: {this.selectedSauce()}</div>
                 {/* <p onClick={ handleSubmit }>Submit</p> */}
                 <br />

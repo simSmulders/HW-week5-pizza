@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
 import './App.css';
 import PizzaBase from './components/PizzaBase';
-//import TotalContainer from './components/TotalContainer';
 import PizzaSauce from './components/PizzaSauce'
 import PizzaToppings from './components/PizzaToppings';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <PizzaBase />
-        <PizzaSauce />
-        <PizzaToppings />
+        <header>
+          <img src={require('./logo/Da_Simone_2.PNG')} className="App-logo" alt="logo" />
+        </header>
+        <div className="App-body">
+          <CssBaseline />
+          <PizzaBase />
+          <PizzaSauce />
+          <PizzaToppings />
+        </div>
       </div>
     );
   }

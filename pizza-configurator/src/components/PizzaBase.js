@@ -48,8 +48,11 @@ class PizzaBase extends Component {
     return (
         <div>
             <form className="filterForm">
-                    <label>Choose the base:</label>
+            <br></br>
+                    <label><b>Choose the base:</b></label>
+                    <br></br>
                     <div className ="Check">
+                    <br></br>
 
                         <label><input type="radio" name="base"  value="25cm NY Style" className="filterForm-radio" onClick={ handleBase25 } />25cm NY Style</label>
                         <br/>
@@ -57,10 +60,13 @@ class PizzaBase extends Component {
                         <br/>
                         <label><input type="radio" name="base" value="35cm NY Style" className="filterForm-radio" onClick={ handleBase35 }/>35cm NY Style</label>
                         <br/>
-                        <Button type="button" onClick={ refreshPage }> <span>Refresh</span> </Button>
+                        <br></br>
+                        <Button variant='extendedFab' color='white' type="button" onClick={ refreshPage }> <span>Refresh</span> </Button>
+                        
                     </div>
             </form>
             <div>
+            <br></br>
                 <div>Selected Base: {this.selectedBase()}</div>
                 {/* <p onClick={ handleSubmit }>Submit</p> */}
                 <br />

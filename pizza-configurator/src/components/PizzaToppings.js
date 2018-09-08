@@ -74,8 +74,9 @@ class PizzaToppings extends Component {
     return (
         <div>
             <form className="ToppingForm">
-                    <label>Choose the toppings:</label>
+                    <label><b>Choose the toppings:</b></label>
                     <div className ="ToppingCheck">
+                    <br></br>
 
                         <label><input type="checkbox" name="topping"  value="Pineapple" className="ToppingForm-check" onClick={ handleToppingPine } />Pineapple</label>
                         <br/>
@@ -89,10 +90,12 @@ class PizzaToppings extends Component {
                         <br/>
                         <label><input type="checkbox" name="topping" value="Cherry tomatoes" className="ToppingForm-check" onClick={ handleToppingCher }/>Cherry tomatoes</label>
                         <br/>
-                        <Button type="button" onClick={ refreshPage }> <span>Refresh</span> </Button>
+                        <br></br>
+                        <Button variant='extendedFab' color='white' type="button" onClick={ refreshPage }> <span>Refresh</span> </Button>
                     </div>
             </form>
             <div>
+            <br></br>
                 <div>Selected Toppings: {this.selectedTopping()}</div>
                 <Button onClick={ handleSubmit }>Submit</Button>
                 <br />

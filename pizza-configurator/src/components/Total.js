@@ -19,7 +19,7 @@ class Total extends Component {
 
     render(){
         
-        let Totalprice = this.saucePrice().reduce((a,b) => {
+        let totalprice = this.saucePrice().reduce((a,b) => {
             return a + b;
         }, this.basePrice().reduce((a, b) => {
             return a + b;
@@ -30,7 +30,9 @@ class Total extends Component {
         return (
         <div>
             <h2>Total Price: </h2>
-            {Totalprice}
+            {totalprice}
+            <br></br>
+            <label><input type='checkbox' /><i>{`turbo-drone-delivery for an additonional 10% on the price: ${Math.round((totalprice * 1.1)*100)/100}`}</i></label>
         </div>   
         )         
     }

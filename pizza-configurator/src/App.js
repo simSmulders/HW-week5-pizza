@@ -5,6 +5,7 @@ import PizzaSauce from './components/PizzaSauce'
 import PizzaToppings from './components/PizzaToppings';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Total from './components/Total'
+import { Route } from 'react-router'
 
 class App extends Component {
   render() {
@@ -15,10 +16,10 @@ class App extends Component {
         </header>
         <div className="App-body">
           <CssBaseline />
-          <PizzaBase />
-          <PizzaSauce />
-          <PizzaToppings />
-          <Total />
+          <Route exact path={`${process.env.PUBLIC_URL}/`} component={ PizzaBase } />
+          <Route exact path={`${process.env.PUBLIC_URL}/`} component={ PizzaSauce } />
+          <Route exact path={`${process.env.PUBLIC_URL}/`} component={ PizzaToppings } />
+          <Route exact path={`${process.env.PUBLIC_URL}/`} component={ Total } />
         </div>
       </div>
     );
